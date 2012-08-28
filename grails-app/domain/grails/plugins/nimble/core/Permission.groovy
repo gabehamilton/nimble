@@ -45,6 +45,7 @@ class Permission implements Serializable {
     static transients = [ "owner" ]
 
     static mapping = {
+		datasource 'ALL'
         cache usage: 'read-write', include: 'all'
         table ConfigurationHolder.config.nimble.tablenames.permission
     }

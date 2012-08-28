@@ -36,6 +36,7 @@ class Url {
     static belongsTo = [Details, ProfileBase]
 
     static mapping = {
+		datasource 'ALL'
         table ConfigurationHolder.config.nimble.tablenames.url
     }
     static constraints = {

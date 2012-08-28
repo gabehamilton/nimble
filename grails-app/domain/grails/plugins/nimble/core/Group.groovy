@@ -42,6 +42,7 @@ class Group {
     ]
 
     static mapping = {
+		datasource 'ALL'
         cache usage: 'read-write', include: 'all'
         table ConfigurationHolder.config.nimble.tablenames.group
 

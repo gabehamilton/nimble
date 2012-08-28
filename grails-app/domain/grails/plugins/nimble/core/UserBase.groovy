@@ -61,6 +61,7 @@ class UserBase {
     ]
 
     static mapping = {
+		datasource 'ALL'
         sort username:'desc'
     
         cache usage: 'read-write', include: 'all'

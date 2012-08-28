@@ -35,6 +35,7 @@ class Details {
   static belongsTo = [FederationProvider]
   
     static mapping = {
+		datasource 'ALL'
         table ConfigurationHolder.config.nimble.tablenames.details
     } 
   static constraints = {

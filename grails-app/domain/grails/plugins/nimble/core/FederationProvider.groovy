@@ -32,6 +32,7 @@ class FederationProvider {
   Map props
 
   static mapping = {
+	datasource 'ALL'
       table ConfigurationHolder.config.nimble.tablenames.federationprovider
       uid column: ConfigurationHolder.config.nimble.fieldnames.uid
   }
