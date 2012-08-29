@@ -16,7 +16,7 @@
  */
 package grails.plugins.nimble
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 import grails.plugins.nimble.core.UserBase
 import grails.plugins.nimble.core.ProfileBase
@@ -30,8 +30,8 @@ class InstanceGenerator {
 
     static user = { 
     	try { 
-    		if(ConfigurationHolder.config?.nimble?.implementation?.user)
-    			InstanceGenerator.class.classLoader.loadClass(ConfigurationHolder.config.nimble.implementation.user).newInstance()
+    		if(Holders.getConfig()?.nimble?.implementation?.user)
+    			InstanceGenerator.class.classLoader.loadClass(Holders.getConfig().nimble.implementation.user).newInstance()
     		else
     			UserBase.newInstance()
     	} catch(ClassNotFoundException e){ UserBase.newInstance() } 
@@ -39,8 +39,8 @@ class InstanceGenerator {
     
     static profile = { 
     	try { 
-    		if(ConfigurationHolder.config?.nimble?.implementation?.profile)
-    			InstanceGenerator.class.classLoader.loadClass(ConfigurationHolder.config.nimble.implementation.profile).newInstance()
+    		if(Holders.getConfig()?.nimble?.implementation?.profile)
+    			InstanceGenerator.class.classLoader.loadClass(Holders.getConfig().nimble.implementation.profile).newInstance()
     		else
     			ProfileBase.newInstance()
     	} catch(ClassNotFoundException e){ ProfileBase.newInstance() } 

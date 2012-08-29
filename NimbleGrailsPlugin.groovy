@@ -27,7 +27,7 @@ import grails.plugins.nimble.core.UserBase
 class NimbleGrailsPlugin {
 
     // the plugin version
-    def version = "0.4-SKULOOP"
+    def version = "0.4.SKULOOP"
 
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.1 > *"

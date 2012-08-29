@@ -16,7 +16,7 @@
  */
 package grails.plugins.nimble.core
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 /**
  * Represents a user within a Nimble Application
@@ -65,7 +65,7 @@ class UserBase {
         sort username:'desc'
     
         cache usage: 'read-write', include: 'all'
-        table ConfigurationHolder.config.nimble.tablenames.user
+        table Holders.getConfig().nimble.tablenames.user
 
 		profile lazy: false
 

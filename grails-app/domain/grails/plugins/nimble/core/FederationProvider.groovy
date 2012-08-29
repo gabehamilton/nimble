@@ -16,7 +16,7 @@
  */
 package grails.plugins.nimble.core
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 /**
  * Represents a remote party that provides federated authentication
@@ -33,8 +33,8 @@ class FederationProvider {
 
   static mapping = {
 	datasource 'ALL'
-      table ConfigurationHolder.config.nimble.tablenames.federationprovider
-      uid column: ConfigurationHolder.config.nimble.fieldnames.uid
+      table Holders.getConfig().nimble.tablenames.federationprovider
+      uid column: Holders.getConfig().nimble.fieldnames.uid
   }
 
   static constraints = {

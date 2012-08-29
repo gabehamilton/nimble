@@ -16,7 +16,7 @@
  */
 package grails.plugins.nimble.core
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 /**
  * Represents a role within a Nimble application
@@ -46,7 +46,7 @@ class Role {
     static mapping = {
 		datasource 'ALL'
         cache usage: 'read-write', include: 'all'
-        table ConfigurationHolder.config.nimble.tablenames.role
+        table Holders.getConfig().nimble.tablenames.role
 
         users cache: true
         groups cache: true

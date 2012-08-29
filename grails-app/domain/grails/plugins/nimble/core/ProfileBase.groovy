@@ -17,7 +17,7 @@
 package grails.plugins.nimble.core
 
 import org.apache.shiro.crypto.hash.Md5Hash
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 /**
  * Represents generic details about users that are useful to many applications
@@ -56,7 +56,7 @@ class ProfileBase {
     static mapping = {
 		datasource 'ALL'
         cache usage: 'read-write', include: 'all'
-        table ConfigurationHolder.config.nimble.tablenames.profilebase
+        table Holders.getConfig().nimble.tablenames.profilebase
     }
 
     static constraints = {

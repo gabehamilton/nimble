@@ -16,7 +16,7 @@
  */
 package grails.plugins.nimble.core
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 /**
  * Our permission object encapsulates details that a normal Shiro deployment
@@ -47,7 +47,7 @@ class Permission implements Serializable {
     static mapping = {
 		datasource 'ALL'
         cache usage: 'read-write', include: 'all'
-        table ConfigurationHolder.config.nimble.tablenames.permission
+        table Holders.getConfig().nimble.tablenames.permission
     }
 
     static constraints = {

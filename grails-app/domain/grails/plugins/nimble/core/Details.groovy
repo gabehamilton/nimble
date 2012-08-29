@@ -16,7 +16,7 @@
  */
 package grails.plugins.nimble.core
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 /**
  * Represents an object that we wish to store a basic set of information about
  *
@@ -36,7 +36,7 @@ class Details {
   
     static mapping = {
 		datasource 'ALL'
-        table ConfigurationHolder.config.nimble.tablenames.details
+        table Holders.getConfig().nimble.tablenames.details
     } 
   static constraints = {
     name(nullable: true, blank: false)

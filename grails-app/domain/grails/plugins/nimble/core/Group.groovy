@@ -16,7 +16,7 @@
  */
 package grails.plugins.nimble.core
 
-import org.codehaus.groovy.grails.commons.ConfigurationHolder
+import grails.util.Holders
 
 /**
  * Represents a grouping of users in a Nimble based appication
@@ -44,7 +44,7 @@ class Group {
     static mapping = {
 		datasource 'ALL'
         cache usage: 'read-write', include: 'all'
-        table ConfigurationHolder.config.nimble.tablenames.group
+        table Holders.getConfig().nimble.tablenames.group
 
         users cache: true
         roles cache: true
