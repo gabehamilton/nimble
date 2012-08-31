@@ -27,7 +27,7 @@ import grails.plugins.nimble.core.UserBase
 class NimbleGrailsPlugin {
 
     // the plugin version
-    def version = "0.4.SKULOOP"
+    def version = "0.4.SKULOOP.1"
 
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.1 > *"
@@ -45,11 +45,12 @@ class NimbleGrailsPlugin {
                       'grails-app/conf/NimbleBootStrap.groovy',
     ]
 
-    def author = "Bradley Beddoes and  open source contributors"
+    def author = "Bradley Beddoes and open source contributors"
     def authorEmail = "nimbleproject@googlegroups.com"
     def title = "Nimble"
     def description = '''\\
     Nimble is an extensive application base environment for Grails.
+    Code for this version is at: https://github.com/gabehamilton/nimble
     '''
 
     // URL to the plugin's documentation
