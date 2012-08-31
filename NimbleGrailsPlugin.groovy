@@ -135,7 +135,7 @@ class NimbleGrailsPlugin {
 			def authUser
 			
             if(application.config?.nimble?.implementation?.user)
-    			authUser = grailsApplication.classLoader.loadClass(application.config.nimble.implementation.user).get(principal)
+    			authUser = application.classLoader.loadClass(application.config.nimble.implementation.user).get(principal)
     		else
     			authUser = UserBase.get(principal)
 
